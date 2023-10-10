@@ -1,37 +1,42 @@
 <template>
-  <!--Body wrapper-->
-  <div
-    class="page-wrapper"
-    id="main-wrapper"
-    data-layout="vertical"
-    data-navbarbg="skin6"
-    data-sidebartype="full"
-    data-sidebar-position="fixed"
-    data-header-position="fixed"
-  >
-    <Sidebar />
-    <!--  Main wrapper -->
-    <div class="body-wrapper">
-      <Header />
+  <v-app>
+    <vuetifyhead />
+    <!-- Body wrapper -->
+    <div
+      class="page-wrapper"
+      id="main-wrapper"
+      data-layout="vertical"
+      data-navbarbg="skin6"
+      data-sidebartype="full"
+      data-sidebar-position="fixed"
+      data-header-position="fixed"
+    >
+      <Sidebar />
+      <!-- Main wrapper -->
+      <div class="body-wrapper">
+        <Header />
+      </div>
+      <!-- Main wrapper end -->
     </div>
-    <!--  Main wrapper end -->
-  </div>
-  <!--Body wrapper end-->
+    <!-- Body wrapper end -->
+  </v-app>
 </template>
 <script>
 import { defineComponent } from "vue";
 import Sidebar from "@/components/admin/Sidebar.vue";
 import Header from "@/components/admin/Header.vue";
+import vuetifyhead from "@/components/vuetifyhead.vue";
+
 export default defineComponent({
   name: "ManageView",
   components: {
     Sidebar,
     Header,
+    vuetifyhead,
   },
   mounted() {
     this.loadScripts();
   },
-
   methods: {
     loadScripts() {
       const scriptUrls = [
@@ -59,6 +64,7 @@ export default defineComponent({
   },
 });
 </script>
-<style>
+<style scoped>
+/* Add any custom styles for this component here */
 @import "@/assets/admin/css/styles.min.css";
 </style>
