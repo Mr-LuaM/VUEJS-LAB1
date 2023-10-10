@@ -2,6 +2,7 @@
   <!---<preloader />-->
   <Header />
   <h1>HI</h1>
+    <h1>Lei Ann Nastor</h1>
 </template>
 <script>
 import { defineComponent } from "vue";
